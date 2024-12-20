@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Castaway</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/style.css') }}" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="content header__content">
+          <div class="logo">Castaway</div>
+          <div class="header__menu">
+            <ul class="header__menu-items">
+              <li class="header__menu-item active">Home</li>
+              <li class="header__menu-item">Episodes</li>
+              <li class="header__menu-item">About</li>
+              <li class="header__menu-item">contact</li>
+            </ul>
+          </div>
+
+        </div>
+      </header>
+
+      <div class="main">
+        <div class="content">
+          <div class="common-info">
+            <div class="common-info__img">
+              <img src="{{ url_for('static', path='img/n.png') }}" class="image" alt="Castaway" />
+            </div>
+            <div class="common-info__info">
+              <div class="common-info__text title-text">
+                <div class="text">
+                  Take your <br />
+                  podcasting to the <br />
+                  <span class="underline">next</span>
+                  <span class="huge">level</span>
+                </div>
+              </div>
+              <div class="common-info__socials">
+                <div class="common-info__socials-text">Listen on</div>
+                <ul class="common-info__socials-list">
+                  <li>
+                    <div class="common-info__spotify">
+                      <img
+                        class="icon"
+                        src="{{ url_for('static', path='img/socials/spotify.png') }}"
+                        alt=""
+                      />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="common-info__yandex">
+                      <img class="icon" src="{{ url_for('static', path='img/socials/yandex.png') }}" alt="" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="common-info__radio">
+                      <img class="icon" src="{{ url_for('static', path='img/socials/radio.png') }}" alt="" />
+                    </div>
+                  </li>
+                  <li>
+                    <div class="common-info__red">
+                      <img class="icon" src="{{ url_for('static', path='img/socials/red.png') }}" alt="" />
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="episodes">
+            <div class="episodes__title">
+              <div class="episodes__title-text">Latest Episodes</div>
+              <div class="episodes__title-button">
+                <button class="blue-button">View all episodes</button>
+              </div>
+            </div>
+            <div class="episodes__cards">
+              <div class="episodes__card">
+                <div class="episodes__card-content">
+                  <div class="episodes__card-img">
+                    <img
+                      class="episodes__img"
+                      src="{{ url_for('static', path='img/episodes/1.png') }}"
+                      alt="фывввввввввв"
+                    />
+                  </div>
+                  {% block content %}<div class="episodes__card-text">
+                    <div class="episodes__card-tag">{{tags}}</div>
+                    <div class="episodes__card-episode">{{title}}</div>
+                    <div class="episodes__card-title huge ">
+                      {{preview}}
+                    </div>
+                    <div class="episodes__card-desc">
+                     {{content}}
+                    </div>{% endblock %}
+                    <div class="episodes__card-button">
+                      <button class="blue-button">View Episode Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="episodes__card">
+                <div class="episodes__card-content">
+                  <div class="episodes__card-img">
+                    <img
+                      class="episodes__img"
+                      src="{{ url_for('static', path='img/episodes/2.png') }}"
+                      alt="фывввввввввв"
+                    />
+                  </div>
+                  <div class="episodes__card-text">
+                    <div class="episodes__card-tag">Tips & Tricks</div>
+                    <div class="episodes__card-episode">Episode 2</div>
+                    <div class="episodes__card-title huge ">
+                      Mic tricks to take you to the next level
+                    </div>
+                    <div class="episodes__card-desc">
+                      Stop rolling with those default settings on your mic. These small tweaks will take you from sounding good to great.
+                    </div>
+                    <div class="episodes__card-button">
+                      <button class="blue-button">View Episode Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="episodes__card">
+                <div class="episodes__card-content">
+                  <div class="episodes__card-img">
+                    <img
+                      class="episodes__img"
+                      src="{{ url_for('static', path='img/episodes/3.png') }}./img/episodes/3.png"
+                      alt="фывввввввввв"
+                    />
+                  </div>
+                  <div class="episodes__card-text">
+                    <div class="episodes__card-tag">Gear</div>
+                    <div class="episodes__card-episode">Episode 1</div>
+                    <div class="episodes__card-title huge ">
+                      The best microphone under $200
+                    </div>
+                    <div class="episodes__card-desc">
+                      With so many microphones on the market, how are you supposed to know what’s the best? Take a look at our top picks.
+                    </div>
+                    <div class="episodes__card-button">
+                      <button class="blue-button">View Episode Details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about">
+            <div class="about__content">
+            <div class="about__info-block">
+              <div class="about__info-link-block "><img class="about__info-link" src="{{ url_for('static', path='img/link.png') }}" class="image" alt="Castaway" /></div>
+              <div class="about__info-visit">Meet your host</div>
+              <div class="about__info-title">Jac
+                ob Paulaner</div>
+              <div class="about__info-text">
+                <div class="about__info-first-paragraph">
+                  Jacob has a background in audio engineering, and has been podcasting since the early days.
+                </div> 
+                <br>
+                <div class="about__info-second-paragraph">
+                  He’s here to help you level up your game by sharing everything he’s learned along the way.
+                </div>
+              </div>
+            </div>
+            <div class="about__img-block"><img class="about__img" src="{{ url_for('static', path='img/n.png') }}" class="image" alt="Castaway" /></div>
+          </div>
+          <div class="comments"></div>
+        </div>
+
+        <div class="comments">
+          <div class="comments__content">
+            <div class="comments__row">
+              <div class="comment">
+                <div class="comment__content">
+                  <div class="comment__stars">
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}" class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}" class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}" class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}" class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                  </div>
+                  <div class="comment__text">I can’t recommend this podcast enough</div>
+                  <div class="comment__autor">Betty Lacey</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__content">
+                  <div class="comment__stars">
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                  </div>
+                  <div class="comment__text">I can’t recommend this podcast enough</div>
+                  <div class="comment__autor">Betty Lacey</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__content">
+                  <div class="comment__stars">
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                  </div>
+                  <div class="comment__text">I can’t recommend this podcast enough</div>
+                  <div class="comment__autor">Betty Lacey</div>
+                </div>
+              </div>
+            </div>
+            <div class="comments__row">
+              <div class="comment">
+                <div class="comment__content">
+                  <div class="comment__stars">
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                  </div>
+                  <div class="comment__text">I can’t recommend this podcast enough</div>
+                  <div class="comment__autor">Betty Lacey</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__content">
+                  <div class="comment__stars">
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                  </div>
+                  <div class="comment__text">I can’t recommend this podcast enough</div>
+                  <div class="comment__autor">Betty Lacey</div>
+                </div>
+              </div>
+              <div class="comment">
+                <div class="comment__content">
+                  <div class="comment__stars">
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                    <div class="star"><img class="star__img"src="{{ url_for('static', path='img/star.png') }}"  class="image" alt="Castaway" /></div>
+                  </div>
+                  <div class="comment__text">I can’t recommend this podcast enough</div>
+                  <div class="comment__autor">Betty Lacey</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__content">
+          <div class="footer__present">
+            <div class="logo">Castaway</div>
+            <div class="footer__present-icons">
+              <div class="insta"><img src="{{ url_for('static', path='img/footer_socials/insta.png') }}" class="ic" alt="Castaway" /></div>
+              <div class="twitter"><img src="{{ url_for('static', path='img/footer__socials/twitter.png') }}" class="ic" alt="Castaway" /></div>
+              <div class="facebook"><img src="{{ url_for('static', path='img/footer__socials/f.png') }}" class="ic" alt="Castaway" /></div>
+           </div>
+          </div>
+          <div class="footer__menu">
+            <div class="footer__menu-list">
+              <div class="footer__menu-item">Home</div>
+              <div class="footer__menu-item">Episodes</div>
+              <div class="footer__menu-item">About</div>
+              <div class="footer__menu-item">contact</div>
+            </div>
+            <div class="footer__help-menu">
+              <ul class="footer__help-items">
+                <li class="header__help-item">Help</li>
+                <li class="header__help-item">Contact</li>
+                <li class="header__help-item">About</li>
+                <li class="header__help-item">Privacy</li>
+                <li class="header__help-item">Terms</li>
+                <li class="header__help-item">Cookies</li>
+                <li class="header__help-item">Ads</li>
+                <li class="header__help-item">Report</li>
+                 <li class="header__help-item">Sign up</li>
+  
+                </ul>
+            </div>
+        </div>
+          <div class="footer__icons">
+            <div class="footer__socials">
+              <ul class="footer__socials-list">
+                <li>
+                  <div class="common-info__spotify">
+                    <img
+                      class="icon2"
+                      src="{{ url_for('static', path='img/socials/spotify.png') }}"
+                      alt=""
+                    />
+                  </div>
+                </li>
+                <li>
+                  <div class="common-info__yandex">
+                    <img class="icon2" src="{{ url_for('static', path='img/socials/yandex.png') }}" alt="" />
+                  </div>
+                </li>
+                <li>
+                  <div class="common-info__radio">
+                    <img class="icon2" src="{{ url_for('static', path='img/socials/radio.png') }}" alt="" />
+                  </div>
+                </li>
+                <li>
+                  <div class="common-info__red">
+                    <img class="icon2" src="{{ url_for('static', path='img/socials/red.png') }}" alt="" />
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
