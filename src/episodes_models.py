@@ -5,7 +5,7 @@ from .db import Base
 
 # модель для сохранения данный в БД
 class Episodes(Base):
-    __tablename__ = ''
+    __tablename__ = 'episodes'
 
     id: Mapped[int] = mapped_column (primary_key=True)
     tags: Mapped[str]
